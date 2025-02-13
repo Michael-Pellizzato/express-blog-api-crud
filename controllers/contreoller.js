@@ -46,7 +46,7 @@ function store(req, res) {
     title: req.body.title,
     content: req.body.content,
     image: req.body.image,
-    tags: req.body.tags,
+    tags: req.body.tags
   };
 
   dati.push(newDati);
