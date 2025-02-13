@@ -18,7 +18,7 @@ const app = express()
 const port = 3000
 app.use(express.static("public"))
 const postRouter = require("./routers/posts")
-
+app.use(express.json())
 app.get('/', (req, res) => {
     
   })

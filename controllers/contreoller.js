@@ -27,7 +27,7 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  const oggettoTrovato = post.find((a) => a.id === parseInt(req.params.id));
+  const oggettoTrovato = dati.find((a) => a.id === parseInt(req.params.id));
 
   if (!oggettoTrovato) {
     return res.json({
