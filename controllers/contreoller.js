@@ -13,6 +13,7 @@ Index dovrà restituire la lista dei post in formato JSON
 Show dovrà restituire un singolo post in formato JSON
 Destroy dovrà eliminare un singolo post dalla lista, stampare nel terminale (console.log) la lista aggiornata, e rispondere con uno stato 204 e nessun contenuto.*/
 
+const { title } = require("process");
 const dati = require("../data/dati");
 
 function index(req, res) {
@@ -42,9 +43,10 @@ function store(req, res) {
 
   const newDati = {
     id: newId,
-    name: req.body.name,
+    title: req.body.title,
+    content: req.body.content,
     image: req.body.image,
-    ingredients: req.body.ingredients,
+    tags: req.body.tags,
   };
 
   dati.push(newDati);
