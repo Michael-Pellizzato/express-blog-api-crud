@@ -16,6 +16,7 @@ Destroy dovrà eliminare un singolo post dalla lista, stampare nel terminale (co
 const express = require("express")
 const app = express()
 const port = 3000
+const cors = require("cors")
 app.use(express.static("public"))
 const postRouter = require("./routers/posts")
 app.use(express.json())
@@ -28,4 +29,8 @@ app.get('/', (req, res) => {
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
   })
+
+  app.use(cors({
+    origin: "http://localhost:5173"
+  }))
 
